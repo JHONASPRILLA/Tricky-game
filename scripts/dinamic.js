@@ -1,7 +1,7 @@
 
 
 let celdas=["","","","","","","","",""]
-let jugadorActual="👉🏾"
+let jugadorActual="🏾❌"
 let resultado=document.querySelector(".result")
 
 let botones=document.querySelectorAll(".btn")
@@ -22,7 +22,7 @@ const triki=(Element,i)=>{
     Element.value=jugadorActual;
     Element.disabled=true;
     celdas[i]=jugadorActual
-    jugadorActual = jugadorActual == `👉🏾` ? `👈🏾` : `👉🏾`;
+    jugadorActual = jugadorActual == `🏾❌` ? `🏾⭕` : `🏾❌`;
     resultado.innerHTML=`PLAYER ${jugadorActual} TURN`
 
     for (let i = 0; i < condiciones.length; i++) {
@@ -50,7 +50,7 @@ const reset=()=>{
         element.value =``
         element.disabled = false
     })
-    jugadorActual =`👉🏾`
+    jugadorActual =`🏾❌`
     resultado.innerHTML = `Player ${jugadorActual} turn`
 }
 document.querySelector(`#reset`).addEventListener(`click`,()=>{
